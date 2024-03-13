@@ -19,7 +19,7 @@ $ curl http://localhost:3000/api/app-route
 Finally, check the output of the dev server.
 
 ```console
-> next-alias-test@0.1.0 dev
+> repro-next-vercel-og-resolution@0.1.0 dev
 > next dev
 
    ▲ Next.js 14.1.3

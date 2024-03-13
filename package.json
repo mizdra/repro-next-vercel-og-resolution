@@ -1,5 +1,5 @@
 {
-  "name": "next-alias-test",
+  "name": "repro-next-vercel-og-resolution",
   "version": "0.1.0",
   "private": true,
   "scripts": {
