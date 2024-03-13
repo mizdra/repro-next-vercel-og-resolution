@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The problem with different @vercel/og resolution for Pages Router and App Router.
 
-## Getting Started
+## Step to reproduce
 
-First, run the development server:
+First, start the dev server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```console
+$ npm i
+$ npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, open a new terminal and run the following commands:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```console
+$ curl http://localhost:3000/api/pages-route
+$ curl http://localhost:3000/api/app-route
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Finally, check the output of the dev server.
 
-## Learn More
+```console
+> next-alias-test@0.1.0 dev
+> next dev
 
-To learn more about Next.js, take a look at the following resources:
+   ▲ Next.js 14.1.3
+   - Local:        http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ ✓ Ready in 1100ms
+ ✓ Compiled /api/pages-route in 94ms (64 modules)
+node_modules/@vercel/og/dist/index.node.js
+ ✓ Compiled /api/app-route in 155ms (81 modules)
+node_modules/next/dist/compiled/@vercel/og/index.node.js
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Why do Pages Router and App Router resolve `@vercel/og` differently?
