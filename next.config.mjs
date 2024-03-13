@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // webpack(config, ctx) {
-  //   console.log(ctx.isServer, ctx.nextRuntime, config)
-  //   return config;
-  // }
+  webpack(config, ctx) {
+    config.module.rules.push({
+      test: /\.tsx$/,
+      use: ["echo-loader"],
+    });
+    return config;
+  },
 };
 
 export default nextConfig;
