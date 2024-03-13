@@ -1,0 +1,12 @@
+diff --git a/node_modules/next/dist/compiled/@vercel/og/index.node.js b/node_modules/next/dist/compiled/@vercel/og/index.node.js
+index c92983c..e513f3f 100644
+--- a/node_modules/next/dist/compiled/@vercel/og/index.node.js
++++ b/node_modules/next/dist/compiled/@vercel/og/index.node.js
+@@ -18766,6 +18766,7 @@ var loadDynamicAsset = ({ emoji }) => {
+   };
+ };
+ async function render(satori2, resvg, opts, defaultFonts, element) {
++  console.log('node_modules/next/dist/compiled/@vercel/og/index.node.js');
+   const options = Object.assign({
+     width: 1200,
+     height: 630,
