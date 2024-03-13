@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "next/og";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const element = (
